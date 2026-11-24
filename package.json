@@ -1,0 +1,16 @@
+{
+  "name": "tanoplayer",
+  "productName": "TanoPlayer",
+  "version": "1.0.0",
+  "description": "Biblioteca desktop de cursos em vídeo",
+  "main": "src/main.cjs",
+  "private": true,
+  "scripts": {
+    "start": "electron .",
+    "package": "node scripts/package-windows.cjs"
+  },
+  "devDependencies": {
+    "electron": "^45.4.1",
+    "lucide-static": "^1.78.0"
+  }
+}

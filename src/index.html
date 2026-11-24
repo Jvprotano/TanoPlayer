@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' tano-media: blob:; media-src tano-media:; object-src 'none'; base-uri 'none'">
+  <title>TanoPlayer</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div class="titlebar"></div>
+  <div class="shell">
+    <aside class="sidebar" id="library-sidebar">
+      <button class="brand" type="button" data-page="home" aria-label="TanoPlayer, início">
+        <span class="brand-icon" aria-hidden="true"></span>
+        <span>Tano<span class="brand-accent">Player</span></span>
+      </button>
+      <nav aria-label="Biblioteca">
+        <p class="nav-label">Biblioteca</p>
+        <div id="nav-items"></div>
+      </nav>
+      <div class="local-indicator" id="local-indicator"></div>
+    </aside>
+    <div class="workspace">
+      <header class="topbar">
+        <button class="icon-button sidebar-toggle" type="button" id="sidebar-toggle" aria-controls="library-sidebar" aria-expanded="true" aria-label="Recolher menu lateral" title="Recolher menu lateral"></button>
+        <div class="breadcrumb" id="breadcrumb"></div>
+        <label class="search" id="search-wrap">
+          <span id="search-icon"></span>
+          <input id="search" type="search" placeholder="Buscar cursos ou aulas…" aria-label="Buscar cursos ou aulas" autocomplete="off">
+          <kbd aria-hidden="true">Ctrl K</kbd>
+        </label>
+        <button class="button primary add-course" type="button" data-action="add-course" id="add-course"></button>
+      </header>
+      <main id="page" class="page" tabindex="-1"></main>
+    </div>
+  </div>
+  <dialog id="editor" class="dialog" aria-labelledby="editor-title"></dialog>
+  <dialog id="confirmation" class="dialog confirmation" aria-labelledby="confirm-title"></dialog>
+  <div id="toast" class="toast" role="status" hidden></div>
+  <script type="module" src="./app.js"></script>
+</body>
+</html>
